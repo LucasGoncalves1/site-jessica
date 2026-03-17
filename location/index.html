@@ -195,7 +195,8 @@ document.addEventListener("DOMContentLoaded",function(event) {elm.style.display=
 					<div class="et_pb_menu_inner_container clearfix">
 						<div class="et_pb_menu__logo-wrap">
 			  <div class="et_pb_menu__logo">
-				<img fetchpriority="high" decoding="async" width="500" height="130" src="../images/logo.png" alt="Tattoos by Jessica. Tatuagens artísticas" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 500px, 100vw" class="wp-image-513">
+				<img fetchpriority="high" decoding="async" width="500" height="130" src="../images/logo.png" alt="Tattoos by Jessica. Tatuagens artísticas" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 500px, 100vw" class="wp-image-513 logo-desktop">
+				<span class="logo-mobile-text">Jessica Tattoo</span>
 			  </div>
 			</div>
 						<div class="et_pb_menu__wrap">
@@ -751,10 +752,120 @@ var et_pb_box_shadow_elements = [];
 			
 		</div>
 		<!-- / Cookie Notice plugin -->	
-			<span class="et_pb_scroll_top et-pb-icon et-visible" style="display: inline;"></span>
+			<a href="https://wa.me/5511999999999" target="_blank" class="et_pb_scroll_top et-pb-icon whatsapp-btn" style="display: inline;" title="Fale conosco no WhatsApp">
+	<svg viewBox="0 0 32 32" fill="#fff" width="24" height="24"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.156-1.97C9.726 30.996 12.742 32 16.004 32 24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.32 22.598c-.386 1.09-1.922 1.994-3.13 2.258-.828.178-1.908.32-5.548-1.194-4.662-1.936-7.664-6.67-7.896-6.98-.222-.31-1.87-2.492-1.87-4.752 0-2.262 1.184-3.374 1.604-3.834.386-.422.914-.598 1.208-.598.29 0 .582.002.836.016.268.014.628-.102.982.75.386.926 1.31 3.19 1.426 3.42.116.232.194.502.04.81-.156.31-.232.502-.464.774-.232.27-.488.604-.696.812-.232.23-.474.48-.204.942.27.46 1.2 1.98 2.578 3.206 1.77 1.576 3.264 2.064 3.726 2.294.46.232.73.194 1-.116.27-.31 1.156-1.346 1.464-1.81.31-.46.618-.386 1.04-.232.422.156 2.682 1.266 3.142 1.496.462.232.77.348.886.54.116.192.116 1.11-.27 2.198z"/></svg>
+</a>
 	
 
 
 
+<style>
+/* Logo Mobile/Desktop */
+.logo-mobile-text {
+	display: none;
+	font-size: 24px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+}
+@media (max-width: 980px) {
+	.logo-desktop { display: none !important; }
+	.logo-mobile-text { display: block !important; }
+}
+
+/* WhatsApp Button Style */
+.whatsapp-btn {
+	background-color: #25D366 !important;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	padding: 10px !important;
+	border-radius: 5px 0 0 5px !important;
+	transition: all 0.3s ease;
+}
+.whatsapp-btn:hover {
+	background-color: #128C7E !important;
+	transform: scale(1.05);
+}
+.whatsapp-btn:before {
+	content: '' !important;
+}
+.whatsapp-btn svg {
+	width: 24px;
+	height: 24px;
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 980px) {
+	.et-menu-nav { display: none !important; }
+	.et_mobile_nav_menu { display: block !important; }
+	.mobile_menu_bar {
+		display: block;
+		cursor: pointer;
+		padding: 15px;
+		position: relative;
+	}
+	.mobile_menu_bar:before {
+		content: '\2261';
+		font-size: 42px;
+		color: #fff;
+		line-height: 1;
+	}
+	.et_mobile_menu {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background: #1a1a1a;
+		z-index: 9999;
+		padding: 20px 0;
+		box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+	}
+	.mobile_nav.opened .et_mobile_menu {
+		display: block;
+	}
+	.et_mobile_menu li {
+		display: block;
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+	}
+	.et_mobile_menu li:last-child {
+		border-bottom: none;
+	}
+	.et_mobile_menu li a {
+		display: block;
+		padding: 15px 20px;
+		color: #fff !important;
+		text-decoration: none;
+		font-size: 16px;
+	}
+	.et_mobile_menu li a:hover {
+		background: rgba(255,255,255,0.1);
+	}
+	.et_pb_menu__wrap {
+		justify-content: flex-end;
+	}
+}
+@media (min-width: 981px) {
+	.et_mobile_nav_menu { display: none !important; }
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	var mobileMenuBars = document.querySelectorAll('.mobile_menu_bar');
+	mobileMenuBars.forEach(function(bar) {
+		bar.addEventListener('click', function() {
+			var mobileNav = this.parentElement;
+			if (mobileNav.classList.contains('opened')) {
+				mobileNav.classList.remove('opened');
+				mobileNav.classList.add('closed');
+			} else {
+				mobileNav.classList.remove('closed');
+				mobileNav.classList.add('opened');
+			}
+		});
+	});
+});
+</script>
 </body></html>
 
