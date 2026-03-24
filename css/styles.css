@@ -43,7 +43,7 @@
 .wpcf7 form.invalid .wpcf7-response-output,
 .wpcf7 form.unaccepted .wpcf7-response-output,
 .wpcf7 form.payment-required .wpcf7-response-output {
-	border-color: #ffb900; /* Yellow */
+	border-color: #000000; /* Black */
 }
 
 .wpcf7-form-control-wrap {
@@ -173,4 +173,15 @@ form.submitting .wpcf7-spinner {
 
 .wpcf7-reflection > output[hidden] {
 	display: none;
+}
+
+.et_pb_section_2.et_pb_section {
+	background-color: #D20000 !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.et_pb_module_header,
+.et_pb_slide_title,
+.dsm_card_title {
+	font-family: "fairwater-sailor-serif", sans-serif !important;
 }
