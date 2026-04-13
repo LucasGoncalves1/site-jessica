@@ -33,7 +33,7 @@
 
 .wpcf7 form.failed .wpcf7-response-output,
 .wpcf7 form.aborted .wpcf7-response-output {
-	border-color: #dc3232; /* Red */
+	border-color: #903B23; /* Red */
 }
 
 .wpcf7 form.spam .wpcf7-response-output {
@@ -51,7 +51,7 @@
 }
 
 .wpcf7-not-valid-tip {
-	color: #dc3232; /* Red */
+	color: #903B23; /* Red */
 	font-size: 1em;
 	font-weight: normal;
 	display: block;
@@ -62,7 +62,7 @@
 	top: -2ex;
 	left: 1em;
 	z-index: 100;
-	border: 1px solid #dc3232;
+	border: 1px solid #903B23;
 	background: #fff;
 	padding: .2em .8em;
 	width: 24em;
@@ -176,7 +176,7 @@ form.submitting .wpcf7-spinner {
 }
 
 .et_pb_section_2.et_pb_section {
-	background-color: #D20000 !important;
+	background-color: #903B23 !important;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -184,4 +184,15 @@ h1, h2, h3, h4, h5, h6,
 .et_pb_slide_title,
 .dsm_card_title {
 	font-family: "fairwater-sailor-serif", sans-serif !important;
+}
+
+.dsm_card_title,
+.dsm_card_subtitle,
+.dsm_card_description,
+.dsm_card_description p {
+	color: #ffffff !important;
+}
+
+.dsm-text-divider-header {
+	color: #ffffff !important;
 }
