@@ -1,0 +1,112 @@
+/* Oculta o banner legado do plugin WordPress (substituído pelo nosso) */
+#cookie-notice {
+	display: none !important;
+	visibility: hidden !important;
+	pointer-events: none !important;
+}
+
+/* Banner de consentimento de cookies — Jessica Tattoo */
+#jessica-cookie-banner {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100000;
+	padding: 0;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 15px;
+	line-height: 1.55;
+	color: #e8e8e8;
+	background: linear-gradient(180deg, rgba(26, 26, 26, 0.97) 0%, #121212 100%);
+	box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.35);
+	border-top: 1px solid rgba(255, 255, 255, 0.08);
+	transform: translateY(110%);
+	opacity: 0;
+	transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease;
+}
+
+#jessica-cookie-banner.jessica-cookie-visible {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+#jessica-cookie-banner-inner {
+	max-width: 1080px;
+	margin: 0 auto;
+	padding: 22px 24px 24px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 18px;
+}
+
+#jessica-cookie-banner p {
+	margin: 0;
+	flex: 1 1 280px;
+	color: rgba(255, 255, 255, 0.88);
+	max-width: 640px;
+}
+
+#jessica-cookie-banner a {
+	color: #7dd3c0;
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+#jessica-cookie-banner a:hover {
+	color: #a8e6d9;
+}
+
+#jessica-cookie-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+	justify-content: flex-end;
+}
+
+#jessica-cookie-actions button {
+	font-family: inherit;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	border-radius: 8px;
+	padding: 12px 20px;
+	border: none;
+	transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+#jessica-cookie-accept {
+	background: #2ea3f2;
+	color: #fff;
+}
+
+#jessica-cookie-accept:hover {
+	background: #1f8fd9;
+}
+
+#jessica-cookie-essential {
+	background: transparent;
+	color: rgba(255, 255, 255, 0.85);
+	border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+#jessica-cookie-essential:hover {
+	background: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 767px) {
+	#jessica-cookie-banner-inner {
+		flex-direction: column;
+		align-items: stretch;
+		padding: 18px 16px 20px;
+	}
+	#jessica-cookie-actions {
+		justify-content: stretch;
+	}
+	#jessica-cookie-actions button {
+		flex: 1 1 auto;
+		min-width: 120px;
+	}
+}
