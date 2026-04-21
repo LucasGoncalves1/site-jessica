@@ -195,9 +195,7 @@ document.addEventListener("DOMContentLoaded",function(event) {elm.style.display=
 					<div class="et_pb_menu_inner_container clearfix">
 						<div class="et_pb_menu__logo-wrap">
 			  <div class="et_pb_menu__logo">
-				<img fetchpriority="high" decoding="async" width="500" height="130" src="images/logo.png" alt="Tattoos by Jessica. Tatuagens artísticas" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 500px, 100vw" class="wp-image-513 logo-desktop">
-				<span class="logo-mobile-text">Jessica Tattoo</span>
-			  </div>
+				<img fetchpriority="high" decoding="async" width="500" height="130" src="images/logo.png" alt="Tattoos by Jessica. Tatuagens artísticas" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 500px, 100vw" class="wp-image-513 logo-desktop">			  </div>
 			</div>
 						<div class="et_pb_menu__wrap">
 							<div class="et_pb_menu__menu">
@@ -273,7 +271,7 @@ document.addEventListener("DOMContentLoaded",function(event) {elm.style.display=
 			
 			<div class="et_pb_module dsm_card_wrapper et_pb_text_align_left">
 					
-					<h3 class="dsm_card_title et_pb_module_header">Tatuadora em Passo Fundo / RS</h3>
+					<h3 class="solid dsm_card_title et_pb_module_header">Tatuadora em Passo Fundo / RS</h3>
 					<div class="dsm_card_subtitle">JÉSSICA DE CAMARGO</div>
 					<div class="dsm_card_description"><p>Tatuagens Tradicionais | Old School</p></div>
 					<div class="et_pb_button_wrapper"><a class="et_pb_button et_pb_more_button " href="booking/index.html">ENTRAR EM CONTATO</a></div>
@@ -575,7 +573,7 @@ document.addEventListener("DOMContentLoaded",function(event) {elm.style.display=
 				
 				
 				
-				<div class="et_pb_text_inner"><p>SELF MADE</p></div>
+				<div class="et_pb_text_inner"><p><img src="images/completo.png" alt="Self Made" style="max-width: 400px; width: 100%; height: auto;"></p></div>
 			</div>
 			</div>
 				
@@ -989,19 +987,62 @@ var et_pb_box_shadow_elements = [];
 
 
 <style>
-/* Logo Mobile/Desktop */
-.logo-mobile-text {
-	display: none;
-	font-size: 24px;
-	font-weight: bold;
-	color: #fff;
-	text-decoration: none;
-}
-@media (max-width: 980px) {
-	.logo-desktop { display: none !important; }
-	.logo-mobile-text { display: block !important; }
+
+/* Header (Divi: força fundo sólido; remove imagem/gradiente do "background") */
+header.et-l.et-l--header,
+header.et-l--header .et_builder_inner_content,
+header.et-l--header .et_pb_with_background,
+header.et-l--header .et_pb_section,
+header.et-l--header .et_pb_row,
+header.et-l--header .et_pb_column,
+header.et-l--header .et_pb_module,
+header.et-l--header .et_pb_menu_inner_container,
+header.et-l--header .et_pb_menu__wrap,
+header.et-l--header .et_mobile_menu,
+#main-header {
+	background: #D20000 !important;
+	background-color: #D20000 !important;
+	background-image: none !important;
 }
 
+/* Home: hero card (dsm_card_0) */
+.dsm_card_0.dsm_card {
+	background-color: wheat;
+}
+.et_pb_section_0 .dsm_card_0 h3.dsm_card_title,
+.et_pb_section_0 .dsm_card_0 h3.dsm_card_title span {
+	color: #903B23 !important;
+}
+.et_pb_section_0 .dsm_card_0 .dsm_card_subtitle {
+	color: #007D76 !important;
+}
+.et_pb_section_0 .dsm_card_0 .dsm_card_description,
+.et_pb_section_0 .dsm_card_0 .dsm_card_description p {
+	color: #903B23 !important;
+}
+.et_pb_section_0 .dsm_card_0 a.et_pb_more_button {
+	color: #fff !important;
+	background: #D20000 !important;
+	background-color: #D20000 !important;
+	border: 2px solid #D20000 !important;
+}
+.et_pb_section_0 .dsm_card_0 a.et_pb_more_button:hover {
+	color: #fff !important;
+	background: #b00000 !important;
+	background-color: #b00000 !important;
+	border-color: #b00000 !important;
+}
+
+
+h1, h2, h3, h4, h5, h6, .et_pb_module_header, .et_pb_slide_title, .dsm_card_title {
+	font-family: sans-serif !important;
+}
+
+.solid {
+	font-family: "fairwater-solid-serif", sans-serif !important;
+	font-weight: 400;
+	font-style: normal;
+}
 /* WhatsApp Button Style */
 .whatsapp-btn {
 	background-color: #25D366 !important;
@@ -1097,6 +1138,15 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 </body></html>
+
+
+
+
+
+
+
+
+
 
 
 
